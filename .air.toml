@@ -1,0 +1,17 @@
+root = "."  
+tmp_dir = "tmp"
+
+[build]
+  cmd = "go build -o ./tmp/main ."
+  bin = "./tmp/main"
+  full_bin = false
+  args_bin = []
+
+[log]
+  time = true
+
+[watcher]
+  dirs = ["."]
+  exclude_dir = ["tmp", "vendor"]
+  extensions = [".go"]
+  ignore = ["README.md", ".gitignore"]
